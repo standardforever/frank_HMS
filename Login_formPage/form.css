@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+ 
+}
+
+.first{
+  width: 100%;
+  height: auto;
+  background-image: url(medicalbackground.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+
+
+}
+form{
+  width: 90%;
+  max-width: 600px;
+}
+.input-group{
+  margin-bottom: 30px;
+  position: relative;
+}
+input, textarea{
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-size: 15px;
+}
+label{
+  height: 100px;
+  position: absolute;
+  left:0;
+  right: 0;
+  padding: 10px;
+  color:black;
+  font-weight: 100;
+  cursor: text;
+  transition: 0.2s;
+  font-weight: 700;
+
+}
+button {
+  padding: 10px 0;
+  color: #fff;
+  outline: none;
+  background-color: black;
+  border: 1px solid #fff;
+  width: 100%;
+  cursor: pointer;
+}
+button:hover{
+  opacity: 0.5;
+
+}
+button:hover:active{
+  opacity: 0.2;
+
+}
+input:focus~label, 
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+  top: -35px;
+  font-size: 14px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+.row .input-group{
+  flex-basis: 40;
+}
+.heading{
+  text-align: center;
+  width: 580px;
+  padding: 20px 0;
+  color: #fff;
+  
+}
+p{
+  font-weight: bold;
+  text-align:center;
+  color:black;
+  display: inline-block;
+  margin-bottom: 20px;
+  
+}
+
