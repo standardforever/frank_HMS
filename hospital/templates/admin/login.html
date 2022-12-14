@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="first">
+    <form method="POST">
+    <div class="heading">
+      <h1 > PORTOHEALTH </h1>
+      <i>  &quot;life matters most....&quot; </i>
+    </div>
+    
+    <div class="input-group">
+      <input type="text" id="name" name="userName" required >
+      <label for="name"><i class="fa-solid fa-user-doctor"></i>User Nmame </label>
+    </div>
+    <div class="input-group">
+      <input type="text" id="Password" required>
+      <label for="Password"><i class="fa-solid fa-phone"></i>Password </label>
+    </div> 
+    <div>
+    <button type="submit" >LOGIN<i class="fas fa-paper-plane"></i></button>
+    <button class="buttonR"type="submit">FORGET PASSWORD ?</button>
+    </form>
+    </div>
+
+{% endblock content %}

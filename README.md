@@ -27,7 +27,7 @@ Follow these steps to contribute to this project
 ```
 	git pull origin master
 ```
--After making changes, stage all the changes you have made locally for a commit by running 
+- After making changes, stage all the changes you have made locally for a commit by running 
 ```
 	git add <file-names>
 ```
@@ -38,4 +38,36 @@ Follow these steps to contribute to this project
 - After making sure your branch is up-to-date, push the new changes to your new branch
 ```
 	git push origin <your-current-branch-name>
+```
+- Create a pull request to the dev branch
+- ***DO NOT*** merge your PRS. They'll be reviewed and merged
+
+## How to run the code (Setup and Installation)
+Follow these steps to setup and run server
+
+- In the root directory of this project, create a virtual environment
+```
+	virtualenv my-env
+```
+- Activate the virtual environment (depending on your operating system) in linux operating system
+```
+	source my-env/bin/activate
+```
+- Make a copy of the .env examples file found in the config directory. Rename that copy to .env. That's where you'd put all future environment variable/configs
+
+- install all Packages(dependece) 
+```
+	pip install -r requirement.txt 
+```
+	OR
+```
+	pip3 install -r requirement.txt
+```
+#### ***Run server***  You have to be in route directory '/frank_HMS'
+```
+	python3 run.py
+```
+- ***NOTE:*** Whenever you install a new package to the project run
+```
+	pip freeze --local requirements.txt
 ```

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTOHEALTH_LOGIN</title>
+  {% if register %}
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/register.css') }}">
+  {% elif login %}
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/login.css') }}">
+  {% endif %}
+  
+  <script src="https://kit.fontawesome.com/560f028a70.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {% block content %}
+        
+    {% endblock content %}
+</body>
+</html>
