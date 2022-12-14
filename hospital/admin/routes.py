@@ -40,9 +40,14 @@ def register():
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
+    
     if request.method == "POST":
         email = request.form.get('name')
         password = request.form.get('password')
         user = User.query.filter_by(email=email).first()
         print(user)
     return render_template('admin/login.html', login='login')
+
+@app.route("/a/b", methods=["GET"])
+def home():
+    return("welcome")
