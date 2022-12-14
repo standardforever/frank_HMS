@@ -63,7 +63,7 @@ Follow these steps to setup and run server
 ```
 	pip3 install -r requirement.txt
 ```
-*** To Run server***  You have to be in route directory '/frank_HMS'
+- *** To Run server***  You have to be in route directory '/frank_HMS'
 ```
 	python3 run.py
 ```
