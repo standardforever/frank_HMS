@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% include '_messages.html' %}
+
+<div class="text-center h1 text-danger">Create Record</div>
+
+<div class="conatiner">
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        {% from "_formhelpers.html" import render_field %}
+        <form action="" method="POST" enctype="multipart/form-data">
+            {{ render_field(form.entry, class="form-control") }}
+            {{ render_field(form.diagnosis, class="form-control") }}
+            {{ render_field(form.recommendation, class='form-control') }}
+            {{ render_field(form.prescription, class='form-control')}}
+            {{ render_field(form.lab, class='form-control')}}
+            <div style="display: flex;">
+                <p><input type=submit value="Create Record" class="btn btn-info mt-2" style="margin-right: 20px;"></p>
+                <p><a href="{{ url_for('doctorAllRecord', id=id) }}" class="btn btn-info btn-sm" style="margin-top: 9px; padding: 8px;">Go Back</a></p>
+            </div>
+            </div>
+        </form>
+          
+    </div>
+</div>
+</div>
+ <!--================== Form for Nurse rocord ENDS====================-->
+{% endblock content %}

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="text-center h1 text-danger">Register</div>
+
+    <!--==================== Registeration Form START ==================-->
+<div class="container">
+    {% include '_messages.html' %}
+    
+    {% from "_formhelpers.html" import render_field %}
+    <form method="post" enctype="multipart/form-data">
+    <div>
+        {{ render_field(form.first_name, class="form-control") }}
+        {{ render_field(form.last_name, class="form-control") }}
+        {{ render_field(form.email, class="form-control") }}
+        {{ render_field(form.address, class="form-control") }}
+        {{ render_field(form.phone, class="form-control") }}
+  
+        
+        <label for="sex">Sex</label>
+            <select name="sex" id="Sex" class="form-control" required>
+                <option value="">Select Sex type</option>
+                <option value="Male">Male</option>
+                <option value= "Female">Female</option>
+            </select>
+
+        <label for="status">Status</label>
+        <select name="status" id="status" class="form-control" required>
+            <option value="">Select Status</option>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+        </select>
+        {{ render_field(form.city, class="form-control")}}
+        {{ render_field(form.state, class="form-control")}}
+        <h3>Relationship Details</h3>
+        {{ render_field(form.Ename, class="form-control")}}
+        {{ render_field(form.Econtact, class="form-control")}}
+        {{ render_field(form.relationship, class="form-control")}}
+    </div>
+    <div style="display: flex;">
+        <p><input type=submit value=Reister class="btn btn-info mt-2" style="margin-right: 20px;"></p>
+        <p><a href="{{ url_for('patientRecord') }}" class="btn btn-info btn-sm" style="margin-top: 9px; padding: 8px;">Go Back</a></p>
+    </div>
+    </form>
+</div>
+    <!--==================== Registeration Form ENDS ==================-->
+{% endblock content %}
