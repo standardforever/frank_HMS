@@ -1,0 +1,350 @@
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+.container {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+/* NAVBAR STYLING STARTS */
+.nav-box {
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 rgb(148, 134, 134);
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: black;
+    
+}
+
+.nav-links a {
+    color: black;
+    font-size: 20px;
+}
+
+/* LOGO */
+.logo {
+    font-size: 32px;
+}
+
+/* LINKS */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.menu li {
+    padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+.services {
+    position: relative; 
+}
+
+.dropdown {
+    background-color: rgb(1, 139, 139);
+    padding: 1em 0;
+    position: absolute; /* WITH RESPECT TO PARENT */
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+
+.dropdown li + li {
+    margin-top: 10px;
+}
+
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+
+.dropdown li:hover {
+    background-color: #4c9e9e;
+
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+
+/* CHECKBOX HACK */
+.navlinks input[type=checkbox] {
+    display: none;
+} 
+
+#checkbox_toggle {
+    display: none;
+}
+
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+
+@media (max-width: 768px) {
+
+.menu { 
+    display:none;
+    position: absolute;
+    background-color:teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+
+}
+
+.menu li:hover {
+    display: inline-block;
+    background-color:#4c9e9e;
+    transition: 0.3s ease;
+}
+
+.menu li + li {
+    margin-top: 12px;
+}
+
+input[type=checkbox]:checked ~ .menu{
+    display: block;
+}
+
+.hamburger {
+    display: block;
+}
+
+.dropdown {
+    left: 50%;
+    top: 30px;
+  transform: translateX(35%);
+}
+
+.dropdown li:hover {
+    background-color: #4c9e9e;
+}
+
+}
+
+
+/* HOME */
+.home-box {
+    background-image: url("../../image/background.jpg");
+    background-repeat: no-repeat;
+    height: 700px;
+    
+}
+
+.home-box a {
+    background-color: blue;
+    color: #fff;
+    padding: 15px;
+    border-radius: 40px;
+}
+
+.home-box a:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.home-box h4 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.home-box h1 {
+    padding-bottom: 30px;
+    font-size: 60px;
+    color: #fff;
+}
+
+.home-container {
+    width: 40%;
+}
+
+/* about */
+
+.about-flex {
+    display: flex;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+.about-image {
+    padding-right: 70px;
+}
+
+h3 {
+    color:  rgb(54, 190, 190);
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+
+/* Service */
+.service-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#service-h3 {
+    text-align: center;
+    color: rgb(171, 171, 228);
+    font-size: 30px;
+}
+#service-h1 {
+    text-align: center;
+    font-size: 50px;
+}
+.service-flex div {
+    flex: 1 0 30%;
+    background-color: rgb(247, 236, 218);
+    margin: 15px;
+    height: 380px;
+}
+
+/* Appointment */
+
+.appointment-box {
+    background-color: #4c9e9e;
+}
+
+.appointment-flex {
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.appointment-flex-child {
+    width: 50%;
+    padding: 40px;
+}
+
+.appointment-form {
+    background-color: #fff;
+    padding: 48px;
+}
+.appointment-option {
+    border-radius: 10px;
+}
+
+.appointment-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#department {
+    padding: 13px;
+    margin: 10px;
+    padding-right: 30px;
+}
+
+#doctor {
+    padding: 13px;
+    margin: 2px;
+    padding-right: 75px;
+}
+
+#name {
+    padding: 10px;
+    margin: 2px;
+    margin-left: 10px;
+    margin-right: 8px;
+}
+
+#email {
+    padding: 10px; 
+}
+
+#date {
+    padding: 8px;
+    margin: 2px;
+    margin-top: 10px;
+    padding-right: 75px;
+    margin-left: 10px;
+}
+
+#time {
+    padding: 8px;
+    margin: 2px;
+    padding-right: 85px;
+}
+
+
+#link {
+    text-align: center;
+    padding: 15px;
+    background-color: blue;
+    border-radius: 30px;
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+#link a {
+    color: rgb(218, 198, 198);
+}
+
+.appointment-flex-child p {
+    margin-top: 35px;
+}
+
+
+
+
+/* footer */
+.footer-flex, .reserved{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+
+    color:  rgb(54, 190, 190);
+}
+
+.footer-box {
+    background-color: teal;
+}
+.footer-flex a {
+    color: #fff;
+    font-size: 15px;
+}
+

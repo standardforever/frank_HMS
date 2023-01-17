@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="text-center h1 text-danger">Register</div>
+
+    <!--==================== Registeration Form START ==================-->
+<div class="container">
+    {% include '_messages.html' %}
+    
+    {% from "_formhelpers.html" import render_field %}
+    <form method="post" enctype="multipart/form-data">
+    <div>
+        {{ render_field(form.first_name, class="form-control") }}
+        {{ render_field(form.last_name, class="form-control") }}
+        {{ render_field(form.email, class="form-control") }}
+        {{ render_field(form.address, class="form-control") }}
+        {{ render_field(form.phone, class="form-control") }}
+        
+        <label for="user_type">User Type</label>
+            <select name="user_type" id="user_type" class="form-control" required>
+                <option value="">Select User type</option>
+                <option value="Admin">Admin</option>
+                <option value= "User">User</option>
+            </select>
+
+        <label for="user_role">User Role</label>
+        <select name="user_role" id="user_role" class="form-control" required>
+            <option value="">Select User Role</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Nurse">Nurse</option>
+            <option value="Staff">Staff</option>
+        </select>
+    </div>
+    <div style="display: flex;">
+    <p><input type=submit value=Reister class="btn btn-info mt-2" style="margin-right: 20px;"></p>
+    <p><a href="{{ url_for('adminPanel') }}" class="btn btn-danger mt-2">Go Back</a></p>
+    </div>
+    </form>
+</div>
+    <!--==================== Registeration Form ENDS ==================-->
+{% endblock content %}

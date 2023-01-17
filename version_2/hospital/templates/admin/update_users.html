@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+{% include '_messages.html' %}
+
+<div class="text-center h1 text-danger">Update User</div>
+<!--========================= Form for Updating Users STRATS ====================-->
+{% if users %}
+<div class="conatiner">
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        {% from "_formhelpers.html" import render_field %}
+        <form action="" method="POST" enctype="multipart/form-data">
+            {{ render_field(form.first_name, class="form-control") }}
+            {{ render_field(form.last_name, class="form-control") }}
+            {{ render_field(form.email, class="form-control") }}
+            {{ render_field(form.address, class="form-control") }}
+            {{ render_field(form.phone, class="form-control") }}
+
+            <label for="user_type">User Type</label>
+            <select name="user_type" id="user_type" class="form-control" required>
+                <option value="">Select User type</option>
+                <option value="Admin">Admin</option>
+                <option value= "User">User</option>
+            </select>
+
+        <label for="user_role">User Role</label>
+        <select name="user_role" id="user_role" class="form-control" required>
+            <option value="">Select User Role</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Nurse">Nurse</option>
+        </select>
+        <div style="display: flex;">
+                <!-- <button type="submit" class="btn btn-outline-info mt-4"> Update User</button> -->
+                <p><input type=submit value="Update User" class="btn btn-info mt-2" style="margin-right: 20px;"></p>
+                <p><a href="{{ url_for('adminPanel') }}" class="btn btn-danger mt-2">Go Back</a></p>
+            </div>
+            </div>
+        </form>
+          
+    </div>
+</div>
+
+
+</div>
+{% endif %}
+
+{% if patient %}
+<div class="conatiner">
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        {% from "_formhelpers.html" import render_field %}
+        <form action="" method="POST" enctype="multipart/form-data">
+            {{ render_field(form.first_name, class="form-control") }}
+        {{ render_field(form.last_name, class="form-control") }}
+        {{ render_field(form.email, class="form-control") }}
+        {{ render_field(form.address, class="form-control") }}
+        {{ render_field(form.phone, class="form-control") }}
+  
+        
+        <label for="sex">Sex</label>
+            <select name="sex" id="Sex" class="form-control" required>
+                <option value="">Select Sex type</option>
+                <option value="Male">Male</option>
+                <option value= "Female">Female</option>
+            </select>
+
+        <label for="status">Status</label>
+        <select name="status" id="status" class="form-control" required>
+            <option value="">Select Status</option>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+        </select>
+        {{ render_field(form.city, class="form-control")}}
+        {{ render_field(form.state, class="form-control")}}
+        <h3>Relationship Details</h3>
+        {{ render_field(form.Ename, class="form-control")}}
+        {{ render_field(form.Econtact, class="form-control")}}
+        {{ render_field(form.relationship, class="form-control")}}
+        <div style="display: flex;">
+            <p><input type=submit value="Create Record" class="btn btn-info mt-2" style="margin-right: 20px;"></p>
+            <p><a href="{{ url_for('patientDetailRecord', id=patient.id) }}" class="btn btn-info btn-sm" style="margin-top: 9px; padding: 8px;">Go Back</a></p>
+        </div>
+        
+            </div>
+        </form>
+          
+    </div>
+</div>
+
+
+</div>
+{% endif %}
+
+<!--============================= Form for Updating Users ENDS =========================-->
+{% endblock content %}

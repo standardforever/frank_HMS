@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/custom_css/index.css') }}"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav-box">
+      <div class="container">
+        <!--============== Header section STARTS============ -->
+        <header>
+          <nav class="navbar">
+            <!--== LOGO ==-->
+            <div class="logo">Klinik</div>
+            <ul class="nav-links">
+              <!-- USIGN CHECKBOX -->
+              <input type="checkbox" id="checkbox_toggle" />
+              <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+              <!-- NAVIGATION MENUS -->
+              <div class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li class="services">
+                  <a href="">Services</a>
+                  <ul class="dropdown">
+                    <li><a href="">Dropdown</a></li>
+                    <li><a href="">Dropdown</a></li>
+                    <li><a href="">Dropdown</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Get Started</a></li>
+              </div>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <!--============== Header section END============ -->
+
+    <!--============== Main section START============ -->
+    <main>
+      <!--===== Home START =====-->
+      <div class="home-box">
+        <div class="container">
+          <div class="home-container">
+            <h4>WELCOME TO KlINIK</h4>
+            <h1>Best Healthcare Solution In Your City</h1>
+            <a href="">BOOK APPOINTMENT</a>
+          </div>
+        </div>
+      </div>
+      <!--===== Home ENDS =====-->
+
+      <!--======= About us START =======-->
+      <div class="about-box">
+        <div class="container">
+          <div class="about-flex">
+            <div class="about-image">
+              <img
+                src="{{url_for('static', filename='image/about.jpg')}}"
+                height="550px"
+                width="600px"
+                alt=""
+              />
+            </div>
+            <div class="about-p">
+              <h3>About us</h3>
+              <h1>Best Medical Care For Yourself and Your Family</h1>
+              <p>
+                Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam
+                dolor diam ipsum et, tempor voluptua sit consetetur sit.
+                Aliquyam diam amet diam et eos sadipscing labore. Clita erat
+                ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
+                clita duo justo et tempor consetetur takimata eirmod, dolores
+                takimata consetetur invidunt magna dolores aliquyam dolores
+                dolore. Amet erat amet et magna
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======= About us END =======-->
+
+      <!---===== Service START ======-->
+      <div class="service-box">
+        <div class="container">
+          <h3 id="service-h3">SERVICES</h3>
+          <h1 id="service-h1">
+            Excellent Medical <br />
+            Services
+          </h1>
+          <div class="container">
+            <div class="service-flex">
+              <div class="service-flex-child">
+                <h3>Emergency Care</h3>
+                <p>
+                  Kasd dolor no lorem nonumy sit labore tempor at justo rebum
+                  rebum stet, justo elitr dolor amet sit
+                </p>
+              </div>
+              <div class="service-flex-child">
+                <h3>Operation & Surgery</h3>
+                <p>
+                  Kasd dolor no lorem nonumy sit labore tempor at justo rebum
+                  rebum stet, justo elitr dolor amet sit
+                </p>
+              </div>
+              <div class="service-flex-child">
+                <h3>Operation & Surgery</h3>
+                <p>
+                  Kasd dolor no lorem nonumy sit labore tempor at justo rebum
+                  rebum stet, justo elitr dolor amet sit
+                </p>
+              </div>
+              <div class="service-flex-child">
+                <h3>Operation & Surgery</h3>
+                <p>
+                  Kasd dolor no lorem nonumy sit labore tempor at justo rebum
+                  rebum stet, justo elitr dolor amet sit
+                </p>
+              </div>
+              <div class="service-flex-child">
+                <h3>Operation & Surgery</h3>
+                <p>
+                  Kasd dolor no lorem nonumy sit labore tempor at justo rebum
+                  rebum stet, justo elitr dolor amet sit
+                </p>
+              </div>
+              <div class="service-flex-child">
+                <h3>Operation & Surgery</h3>
+                <p>
+                  Kasd dolor no lorem nonumy sit labore tempor at justo rebum
+                  rebum stet, justo elitr dolor amet sit
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---===== Service START ======-->
+
+      <!--====== APPOINTMENT START====-->
+      <div class="appointment-box">
+        <div class="container">
+          <div class="appointment-flex">
+            <div class="appointment-flex-child">
+              <h3>APPOINTMENT</h3>
+              <h1>Make An Appointment For Your Family</h1>
+              <p>
+                Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd
+                ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo
+                rebum sea invidunt voluptua. Eos vero eos vero ea et dolore
+                eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores
+                magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus
+                sed.
+              </p>
+            </div>
+            <div class="appointment-flex-child">
+              <div class="appointment-form">
+                <h2>Book An Appointment</h2>
+                <select name="department" class="appointment-option" id="department">
+                  <option selected>Choose Department</option>
+                  <option value="">Department 1</option>
+                  <option value="">Department 1</option>
+                  <option value="">Department 1</option>
+                </select>
+                <select name="doctor" class="appointment-option" id="doctor">
+                  <option selected>Select Doctor</option>
+                  <option value="">Department 1</option>
+                  <option value="">Department 1</option>
+                  <option value="">Department 1</option>
+                </select>
+                <br>
+                <input type="text" placeholder="Your Name" class="appointment-option" id="name">
+                <input type="text" placeholder="Your Email" class="appointment-option" id="email">
+                <br>
+                <input type="date" name=""  placeholder="Date" class="appointment-option" id="date">
+                <input type="time" class="appointment-option" id="time">
+                <div id="link">
+                <a href="">BOOK APPOINTMENT</a>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--====== APPOINTMENT ENDS====-->
+    </main>
+    <!--============== Main section END============ -->
+
+    <!--============== Footer section START============ -->
+    <footer>
+      <div class="footer-box">
+        <div class="container">
+          <div class="footer-flex">
+            <ul>
+              <li><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li><a href="">4</a></li>
+            </ul>
+
+            <ul>
+              <li><h2>QUICK LINKS</h2></li>
+              <li><a href="">Home</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Our Services</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+
+            <ul>
+              <li><h2>Services</h2></li>
+              <li><a href="">Counselling</a></li>
+              <li><a href="">Counsulting</a></li>
+              <li><a href="">Dentistry</a></li>
+            </ul>
+
+            <ul>
+              <li><h2>Support</h2></li>
+              <li><a href="">Help center</a></li>
+              <li><a href="">Terms and Condition</a></li>
+              <li><a href="">Privacy</a></li>
+            </ul>
+            <ul>
+              <li><h2>Contact</h2></li>
+              <li><a href="">standard.forever123@gmail.com</a></li>
+              <li><a href="">+234 9025162207</a></li>
+              <li><a href="">Privacy</a></li>
+            </ul>
+          </div>
+
+          <div class="reserved">
+            <div class="">
+              <p class="mb-md-0">
+                &copy; <a class="text-primary" href="#">Klinik</a>. All Rights
+                Reserved.
+              </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <p class="mb-0">
+                Designed by
+                <a class="text-primary" href="">standardforever</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--============== Footer section END ============ -->
+  </body>
+</html>
